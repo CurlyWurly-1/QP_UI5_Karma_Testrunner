@@ -1,3 +1,11 @@
+## commands
+npm install --global karma-cli
+npm i
+npx browserslist@latest --update-db
+karma start
+
+
+
 ## Application Details
 |               |
 | ------------- |
