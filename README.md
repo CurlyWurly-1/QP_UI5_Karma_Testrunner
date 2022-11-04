@@ -1,10 +1,39 @@
+## Amendments
+ - Add ./karma.conf.js
+ - Add ./test/testsuite.qunit.html
+ - Add ./test/testsuite.qunit.js
+ - Add the following to "package .json"
+```
+	"scripts": {
+		"start": "fiori run --open 'index.html'",
+		"start-local": "fiori run --config ./ui5-local.yaml --open 'index.html'",
+		"start-noflp": "fiori run --open 'index.html'",
+		"build": "ui5 build -a --clean-dest --include-task=generateManifestBundle generateCachebusterInfo",
+		"deploy": "fiori verify",
+		"deploy-config": "fiori add deploy-config",
+		"test": "karma start",
+		"unit-tests": "fiori run --open test/unit/unitTests.qunit.html",
+		"int-tests": "fiori run --open test/integration/opaTests.qunit.html"
+	},
+	"devDependencies": {
+		"@sap/ux-ui5-tooling": "1",
+		"@ui5/cli": "^2.11.1",
+		"@ui5/fs": "^2.0.6",
+		"@ui5/logger": "^2.0.1",
+		"karma": "^6.3.4",
+		"karma-chrome-launcher": "^3.1.1",
+		"karma-coverage": "^2.0.3",
+		"karma-junit-reporter": "^2.0.1",
+		"karma-ui5": "^2.3.4",
+		"puppeteer": "^10.2.0",
+		"rimraf": "3.0.2"
+	},
+```
 ## commands
-npm install --global karma-cli
-npm i
-npx browserslist@latest --update-db
-karma start
-
-
+ - npm install --global karma-cli
+ - npm i
+ - npx browserslist@latest --update-db
+ - karma start
 
 ## Application Details
 |               |
